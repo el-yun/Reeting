@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/jquery-1.11.1.min.js"charset="utf-8"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/idea.js" charset="utf-8"></script>
+    <script src="./js/jquery-ui-1.10.4.custom.min.js" charset="utf-8"></script>
+    <script src="./js/jquery.ui.draggable.js" charset="utf-8"></script>
+    <script src="./js/jquery.ui.touch-punch.min.js" charset="utf-8"></script>
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <script src="./js/socket.io.js"></script>
+<script>
+
+</script>
+    <link rel="stylesheet" href="./css/idea.css"/>
+    <title>Idea!</title>
+</head>
+<body>
+    <div class="controller">
+        <div class="left-btn" id="btn-newitem" href="#InputModal" data-toggle="modal">
+            <span class="glyphicon glyphicon-plus icon"></span>
+            <p class="btn-title">새 아이템</p>
+        </div>
+        <div class="left-btn" id="btn-minutes">
+            <span class="glyphicon glyphicon-repeat icon"></span>
+            <p class="btn-title">회의록변환</p>
+        </div>
+        <!--
+        <div class="left-btn" id="btn-save">
+            <span class="glyphicon glyphicon-floppy-disk icon"></span>
+            <p class="btn-title">회의저장</p>
+        </div>-->
+        <div class="left-btn" id="btn-exit">
+            <span class="glyphicon glyphicon-send icon"></span>
+            <p class="btn-title">회의종료</p>
+        </div>
+    </div>
+    <div class="roominfo" id="room-code"></div>
+    <div id="idea-canvas" class="canvas">
+    </div>
+    
+
+    <!-- idea Input -->
+    <div class="modal fade" id="InputModal" data-index="" tabindex="-1" role="dialog" aria-labelledby="InputModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">아이템 작성</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success">아이템의 내용은 다른 사용자가 이해할 수 있도록 간결하게 씁니다. 관련 URL로 추가할 수 있습니다.</div>
+              <form role="form">
+              <div class="form-group">
+                <label for="ideaInputEmail1">제목</label>
+                <input type="text" id="data-item-subject" class="form-control"  placeholder="회의 아이템 제목을 입력합니다.">
+              </div>
+              <div class="form-group">
+                <label for="ideaInputPassword1">내용</label>
+                <textarea id="data-item-context" class="form-control" rows="3" placeholder="회의 아이템 내용을 입력합니다."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="ideaInputEmail1">관련 URL</label>
+                <input type="text"  id="data-item-url"  class="form-control" placeholder="회의 아이템 관련 URL을 입력합니다.">
+              </div>
+              <!--
+              <div class="form-group">
+                <label for="ideaInputEmail1">중요도</label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level" value="large" type="radio">상
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="middle" type="radio">중
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="small" type="radio">하
+                     </label>
+                </div>
+              -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            <button id="modal-accept" type="button" class="btn btn-primary">등록하기</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- idea Input -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="false" data-backdrop="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">회의실 접속하기</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success">기존에 회의실 이름을 입력하면 기존 회의실로 접속할 수 있습니다.</div>
+              <form role="form">
+              <div class="form-group">
+                <label for="ideaInputEmail1">회의실 이름</label>
+                <input type="text" id="data-room" class="form-control"  placeholder="회의실 이름을 입력합니다.">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button id="modal-connect" type="button" class="btn btn-primary">접속하기</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    
+    <!-- idea Input -->
+    <div class="modal fade" id="InputModal" data-index="" tabindex="-1" role="dialog" aria-labelledby="InputModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">아이템 작성</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success">아이템의 내용은 다른 사용자가 이해할 수 있도록 간결하게 씁니다. 관련 URL로 추가할 수 있습니다.</div>
+              <form role="form">
+              <div class="form-group">
+                <label for="ideaInputEmail1">제목</label>
+                <input type="text" id="data-item-subject" class="form-control"  placeholder="회의 아이템 제목을 입력합니다.">
+              </div>
+              <div class="form-group">
+                <label for="ideaInputPassword1">내용</label>
+                <textarea id="data-item-context" class="form-control" rows="3" placeholder="회의 아이템 내용을 입력합니다."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="ideaInputEmail1">관련 URL</label>
+                <input type="text"  id="data-item-url"  class="form-control" placeholder="회의 아이템 관련 URL을 입력합니다.">
+              </div>
+              <!--
+              <div class="form-group">
+                <label for="ideaInputEmail1">중요도</label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level" value="large" type="radio">상
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="middle" type="radio">중
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="small" type="radio">하
+                     </label>
+                </div>
+              -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            <button id="modal-accept" type="button" class="btn btn-primary">등록하기</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+    <!-- idea View -->
+    <div class="modal fade" id="DataModal" data-index="" tabindex="-1" role="dialog" aria-labelledby="InputModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">아이템 정보보기 및 수정</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success">아이템의 내용은 회의 구성원 모두가 언제나 수정이 가능합니다.</div>
+              <form role="form">
+              <div class="form-group">
+                <label for="ideaInputEmail1">제목</label>
+                <input type="text" id="modify-item-subject" class="form-control"  placeholder="회의 아이템 제목을 입력합니다.">
+              </div>
+              <div class="form-group">
+                <label for="ideaInputPassword1">내용</label>
+                <textarea id="modify-item-context" class="form-control" rows="3" placeholder="회의 아이템 내용을 입력합니다."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="ideaInputEmail1">관련 URL</label>
+                <input type="text"  id="modify-item-url"  class="form-control" placeholder="회의 아이템 관련 URL을 입력합니다.">
+              </div>
+              <!--
+              <div class="form-group">
+                <label for="ideaInputEmail1">중요도</label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level" value="large" type="radio">상
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="middle" type="radio">중
+                     </label>
+                     <label>
+                        <input id="data-item-level" name="data-item-level"  value="small" type="radio">하
+                     </label>
+                </div>
+              -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            <button id="modal-modify" type="button" class="btn btn-primary">등록하기</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    
+</body>
+</html>
