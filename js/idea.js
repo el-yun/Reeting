@@ -5,7 +5,16 @@
  var room_name = null;
  var socket = null;
  var obj_Collection = [];
+ var user_list = [];
  var Collection_zindex = 1;
+ var microphone = null;
+
+// Microphone Detect
+navigator.getUserMedia  = navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia;
+
 var obj = function () {
     this._idx = "obj_" + new Date().getTime();
     this.idea_type = "Suggest";
@@ -19,7 +28,7 @@ var obj = function () {
     this.parent = "";
     this.child = [];
     this.template = null;
-    this.visible = true;
+    this.visible = "visible";
 }
 
 obj.prototype.eventListener = function(){
@@ -33,7 +42,6 @@ obj.prototype.eventListener = function(){
             that.x = $(this).css("left");
             that.y = $(this).css("top");
             socket_itemupdate(that);
-            console.log(obj_Collection);
         }
     });
     $( "#" + that._idx ).droppable({
@@ -42,10 +50,14 @@ obj.prototype.eventListener = function(){
             try {
                 var merge = confirm("아이템을 병합하시겠습니까?");
                 if (merge) {
-                    handleobj.effect("scale", { percent: 5 }, 500, function () {
-                        handleobj.hide();
+                        handleobj.effect("scale", { percent: 5 }, 600, function () {
+                        handleobj.addClass("vhide");
                         var handleobj_idx = handleobj.attr("data-index");
-                        this.child.push(handleobj_idx);
+                        that.child.push(handleobj_idx);
+                        obj_Collection[handleobj_idx].visible = "hidden";
+                        obj_Collection[handleobj_idx].x = handleobj.css("left");
+                        obj_Collection[handleobj_idx].y = handleobj.css("top");
+                        socket_itemupdate(obj_Collection[handleobj_idx]);
                     });
                 }
             } catch(e){
@@ -70,15 +82,18 @@ obj.prototype.replace_property = function(newobj){
     }
 }
 obj.prototype.init = function(){
-    var template = Obj_Template(this.idea_type, this.hot, this.size, this.subject, this.contents, this._idx, this.x, this.y);
+    var template = Obj_Template(this.idea_type, this.hot, this.size, this.subject, this.contents, this._idx, this.x, this.y, this.visible);
     $("#idea-canvas").append(template);
     this.eventListener();
 }
 obj.prototype.redraw = function(){
+    var _visible = '';
+    if(this.visible == "hidden") _visible = ' vhide';
+    console.log(_visible + "<>" + this.visible);
     $("#idea-canvas #"+ this._idx + " .idea-type").html(this.idea_type);
     $("#idea-canvas #"+ this._idx + " .Subject").html(this.subject);
     $("#idea-canvas #"+ this._idx).removeAttr('class');
-    $("#idea-canvas #"+ this._idx).attr('class', 'circle ' +  this.hot + ' size-' +  this.size + ' drag-object draggable');
+    $("#idea-canvas #"+ this._idx).attr('class', 'circle ' +  this.hot + ' size-' +  this.size + ' drag-object draggable' + _visible);
     $("#idea-canvas #"+ this._idx).attr('data-index', this._idx);
     $("#idea-canvas #"+ this._idx).attr('style', 'left:' + this.x + ';top:' + this.y + ';');
     this.eventListener();
@@ -86,8 +101,10 @@ obj.prototype.redraw = function(){
 
 
 
-function Obj_Template (itype, hot, size, subject, contents, idx, _x, _y) {
-    this._template = '<div id="' + idx + '" class="circle ' +  hot + ' size-' +  size + ' drag-object draggable" href="#DataModal" data-toggle="modal" data-index="' + idx + '" style="left:' + _x + ';top:' + _y + ';">';
+function Obj_Template (itype, hot, size, subject, contents, idx, _x, _y, visible) {
+    var _visible = '';
+    if(visible == "hidden") _visible = ' vhide';
+    this._template = '<div id="' + idx + '" class="circle ' +  hot + ' size-' +  size + ' drag-object draggable' + _visible + '" href="#DataModal" data-toggle="modal" data-index="' + idx + '" style="left:' + _x + ';top:' + _y + ';">';
     this._template +='<p class="idea-type">' + itype + '</p>';
     this._template +='<p class="Subject">' +  subject + '</p>';
     this._template +='</div>';
@@ -96,7 +113,7 @@ function Obj_Template (itype, hot, size, subject, contents, idx, _x, _y) {
 
 function zindexinit(){
     try{
-        if(Collection_zindex > 5){
+        if(Collection_zindex > 50){
             for(var i in obj_Collection){
                 $("#" + obj_Collection[i]._idx).css("z-index", 1);
             }
@@ -136,7 +153,7 @@ $(function() {
 
     // 아이템 등록하기 버튼 이벤트
     $(document).on("click","#modal-accept",function(){
-        var datainput = ["#data-item-subject","#data-item-url"];
+        var datainput = ["#data-item-subject"];
         if(validation(datainput)){
             var _obj = new obj();
             _obj.subject = $("#data-item-subject").val();
@@ -157,7 +174,7 @@ $(function() {
     // 아이템 수정버튼 이벤트
     $(document).on("click", "#modal-modify", function () {
         var idx = $("#DataModal").attr("data-index");
-        var datainput = ["#modify-item-subject", "#modify-item-url"];
+        var datainput = ["#modify-item-subject"];
         if (validation(datainput)) {
             var _obj = obj_Collection[idx];
             _obj.subject = $("#modify-item-subject").val();
@@ -175,6 +192,10 @@ $(function() {
 
     });
 
+    $('#connect-user-list').click(function() {
+        $(".connect-list").toggle();
+    });
+
     // 아이템 수정시 기존 값 불러오기 이벤트
     $('#DataModal').on('show.bs.modal', function (e) {
             $(this).attr("data-index", e.relatedTarget.id);
@@ -184,25 +205,78 @@ $(function() {
             $("#modify-item-url").val(_obj.url);
     });
     socket_connect();
+    // 음성 마이크 작동
+    var rtc = holla.createClient({host :"121.154.33.215",port:3000,debug:true});
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({audio: true}, function(stream) {
+            /*
+            var output_mic = document.querySelector('#mic-speaker');
+            var stream_url = createSrc(stream);
+            output_mic.src = stream_url;
+            */
+            rtc.register("tom", function(worked) {
+                holla.createFullStream(function(err, stream) {
+                    var call = rtc.call("bob");
+                    call.addStream(stream);
+                });
+            });
+        }, errorCallback);
+    }
+
+    rtc.register("bob", function(worked) {
+        rtc.on("call", function(call) {
+
+            holla.createFullStream(function(err, stream) {
+                call.addStream(stream);
+                call.answer();
+                call.ready(function(stream) {
+                    holla.pipe(stream, $("#mic-speaker"));
+                });
+            });
+
+        });
+    });
 });
 
+function room_user_status(user){
+    // 접속한 유저
+    console.log(user);
+    if(user_list.length > 0) user_list = [];
+    for(var i in user){
+        user_list.push(user[i]);
+    }
+    console.log(user_list);
+    var user = "";
+    for(var u in user_list) {
+        user += '<li>' + user_list[u] + '</li>';
+    }
+    $("#conn-user").html(user);
+}
+
+var errorCallback = function(e) {
+    console.log('Reeeejected!', e);
+};
+var createSrc = window.URL ? window.URL.createObjectURL : function(stream) {return stream;};
 // Socket.io 기본 통신 이벤트 함수
 // 접속
 function socket_connect(){
-    socket = io.connect('http://localhost:3000/');
+    socket = io.connect('http://121.154.33.215:3000/');
+
+
     socket.on('data-response', function(res){
         switch(res.category) {
             case "room-newuser":
-                alert(res.msg);
+                room_user_status(res.room_user);
+                break;
+            case "room-outuser":
+                room_user_status(res.room_user);
                 break;
             case "room-connect":
                 // 룸 접속 성공
                 room_name = res.room_name;
                 $('#LoginModal').modal('hide');
                 $('#room-code').html(room_name);
-                break;
-            case "room-userlist":
-                console.log(res.users);
+                room_user_status(res.room_user);
                 break;
             case "data-put":
                 var _obj = new obj();
@@ -219,13 +293,20 @@ function socket_connect(){
                 try {
                     for (var i in res.col) {
                         var _obj = new obj();
-                        console.log(_obj);
                         _obj.replace_property(res.col[i]);
                         _obj.init();
                         obj_Collection[res.col[i]._idx] = _obj;
                     }
                 } catch(e){
                     exception_msg(e);
+                }
+                break;
+            case "data-mic":
+                if(res.stream) {
+                    try{
+                    } catch(e){
+                        console.log(res.stream + " ERROR: " + e);
+                    }
                 }
                 break;
             case "connect":
@@ -258,7 +339,7 @@ function validation(data){
         if($(data[i]).val() == null || $(data[i]).val() == "") flag = true;
     }
     if(flag == true){
-        alert("모든 값을 입력해주세요!");
+        alert("필수 입력란에는 꼭 입력해주세요!");
         return false;
     } else {
         return true;
@@ -267,6 +348,8 @@ function validation(data){
 
 // 예외처리 메세지 출력함수
 function exception_msg(m){
+
+
     console.log(m);
     //window.location.reload();
 }

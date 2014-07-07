@@ -1,16 +1,14 @@
-var app = require('express')();
-var http = require('http').Server(app);
+var express = require('express');
+var app = express();
+var http = require('http').Server(app).listen(3000);
 var io = require('socket.io')(http);
-
-
+var holla = require('holla');
+var rtc = holla.createServer(http);
 // Define
 var rooms = [];
-
-
 app.get('/', function(req, res){
     console.log('Page Connection');
 });
-
 
 io.sockets.on('connection', function(socket){
     // Connect
@@ -18,9 +16,16 @@ io.sockets.on('connection', function(socket){
     socket.emit('data-response', { category: 'connect', msg : 'Connected :' + socket.id } );
     // Disconnect
     socket.on('disconnect', function(){
-        console.log('Disconnect :' + socket.id);
+        if (rooms[socket.rooms[1]] != undefined){
+            socket.leave(socket.rooms[1]);
+            var room_userids = rooms[socket.rooms[1]].socket_ids;
+            for(var c in room_userids){
+                if(rooms[socket.rooms[1]].socket_ids[c] == socket.id) delete rooms[socket.rooms[1]].socket_ids[c];
+            }
+            socket.in(socket.rooms[1]).emit('data-response', { category: 'room-outuser', room_user: Object.keys(rooms[socket.rooms[1]].socket_ids)});
+            console.log('Disconnect :' + socket.id);
+        }
     });
-    // Data Request
     socket.on('data-request', function(req){
         console.log("data request...");
         switch(req.category) {
@@ -43,6 +48,11 @@ io.sockets.on('connection', function(socket){
                     socket.in(req.room).emit('data-response', { category: 'data-update', item: req.item, idx: req.idx});
                 }
                 break;
+            case "data-mic": // 아이템 업데이트
+                if(rooms[req.room] != undefined) {
+                    socket.in(req.room).emit('data-response', { category: 'data-mic', stream: req.stream});
+                }
+                break;
             case "test":
                 console.log(req.data);
                 break;
@@ -55,6 +65,7 @@ io.sockets.on('connection', function(socket){
 });
 
 function set_room(socket, roomname, username) {
+    console.log("roomname : " + roomname);
     socket.join(roomname);
     var room = roomname;
     var username = username;
@@ -69,12 +80,8 @@ function set_room(socket, roomname, username) {
     rooms[room].socket_ids[username] = socket.id;
 
     // 방 구성원에 접속 여부 통보
-    socket.in(room).emit('data-response', { category: 'room-newuser', msg: username + ' 님이 입장하셨습니다.'});
-    socket.emit('data-response', { category: 'room-connect', msg: room + '방에 접속합니다.', room_name : room});
-
-
-    // 유저 목록 전달
-    socket.in(room).emit('data-response', { category: 'room-userlist', users: Object.keys(rooms[room].socket_ids)});
+    socket.in(room).emit('data-response', { category: 'room-newuser', room_user: Object.keys(rooms[room].socket_ids) ,msg: username + ' 님이 입장하셨습니다.'});
+    socket.emit('data-response', { category: 'room-connect', msg: room + '방에 접속합니다.', room_name : room, room_user: Object.keys(rooms[room].socket_ids) });
 
     return rooms;
 }

@@ -13,6 +13,7 @@
     <script src="./js/jquery.ui.touch-punch.min.js" charset="utf-8"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet"/>
     <script src="./js/socket.io.js"></script>
+    <script src="./js/holla.js"></script>
     <link rel="stylesheet" href="./css/idea.css"/>
     <title>Idea!</title>
 </head>
@@ -95,24 +96,29 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
+
+<div id="connect-user-list" class="connect-user">
+    <span class="glyphicon glyphicon-user icon"></span>
+    현재 접속자
+</div>
+
 <!-- idea Input -->
 <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel"
      aria-hidden="false" data-backdrop="false">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">회의실 접속하기</h4>
             </div>
             <div class="modal-body">
                 <div class="alert alert-success">기존에 회의실 이름을 입력하면 기존 회의실로 접속할 수 있습니다.</div>
                 <form role="form">
                     <div class="form-group">
-                        <label>회의실 이름</label>
+                        <label for="data-room">회의실 이름 *</label>
                         <input type="text" id="data-room" class="form-control" placeholder="회의실 이름을 입력합니다.">
                     </div>
                     <div class="form-group">
-                        <label>사용자 명</label>
+                        <label for="data-user-name">사용자 명 *</label>
                         <input type="text" id="data-user-name" class="form-control" placeholder="회의실에서 사용할 이름을 입력하세요">
                     </div>
                 </form>
@@ -141,16 +147,16 @@
                 <div class="alert alert-success">아이템의 내용은 다른 사용자가 이해할 수 있도록 간결하게 씁니다. 관련 URL로 추가할 수 있습니다.</div>
                 <form role="form">
                     <div class="form-group">
-                        <label for="ideaInputEmail1">제목</label>
+                        <label for="data-item-subject">제목 *</label>
                         <input type="text" id="data-item-subject" class="form-control" placeholder="회의 아이템 제목을 입력합니다.">
                     </div>
                     <div class="form-group">
-                        <label for="ideaInputPassword1">내용</label>
+                        <label for="data-item-context">내용</label>
                         <textarea id="data-item-context" class="form-control" rows="3"
                                   placeholder="회의 아이템 내용을 입력합니다."></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="ideaInputEmail1">관련 URL</label>
+                        <label for="data-item-url">관련 URL</label>
                         <input type="text" id="data-item-url" class="form-control" placeholder="회의 아이템 관련 URL을 입력합니다.">
                     </div>
                     <!--
@@ -193,17 +199,17 @@
                 <div class="alert alert-success">아이템의 내용은 회의 구성원 모두가 언제나 수정이 가능합니다.</div>
                 <form role="form">
                     <div class="form-group">
-                        <label for="ideaInputEmail1">제목</label>
+                        <label for="modify-item-subject">제목 *</label>
                         <input type="text" id="modify-item-subject" class="form-control"
                                placeholder="회의 아이템 제목을 입력합니다.">
                     </div>
                     <div class="form-group">
-                        <label for="ideaInputPassword1">내용</label>
+                        <label for="modify-item-context">내용</label>
                         <textarea id="modify-item-context" class="form-control" rows="3"
                                   placeholder="회의 아이템 내용을 입력합니다."></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="ideaInputEmail1">관련 URL</label>
+                        <label for="modify-item-url">관련 URL</label>
                         <input type="text" id="modify-item-url" class="form-control"
                                placeholder="회의 아이템 관련 URL을 입력합니다.">
                     </div>
@@ -233,6 +239,12 @@
     <!-- /.modal-dialog -->
 </div>
 <!-- /.modal -->
-
+<!-- Connect User -->
+<div class="connect-list">
+    <ul id="conn-user">
+    </ul>
+    <audio id="mic-speaker" autoplay></audio>
+</div>
+<!-- /Connect User -->
 </body>
 </html>
