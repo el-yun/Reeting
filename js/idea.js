@@ -1,19 +1,33 @@
 /*
-    - Solution Reeting -
-    Define Object
-*/
- var room_name = null;
- var socket = null;
- var obj_Collection = [];
- var user_list = [];
- var Collection_zindex = 1;
- var microphone = null;
+ - Solution Reeting -
+ Define Object
+ */
+var room_name = null;
+var socket = null;
+var obj_Collection = [];
+var user_list = [];
+var Collection_zindex = 1;
+var microphone = null;
+var rtc = null;
+var peerConn = null;
+var started = false;
+var localStream = null;
+
+var pc_config = {'iceServers': [
+    {'url': 'stun:stun.l.google.com:19302'}
+]};
+
+var pc_constraints = {'optional': [
+    {'DtlsSrtpKeyAgreement': true}
+]};
+
+// Set up audio and video regardless of what devices are present.
+var sdpConstraints = {'mandatory': {
+    'OfferToReceiveAudio': true,
+    'OfferToReceiveVideo': false }};
 
 // Microphone Detect
-navigator.getUserMedia  = navigator.getUserMedia ||
-    navigator.webkitGetUserMedia ||
-    navigator.mozGetUserMedia ||
-    navigator.msGetUserMedia;
+navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
 var obj = function () {
     this._idx = "obj_" + new Date().getTime();
@@ -131,9 +145,9 @@ $(function() {
     // 최초 접근시 로그인 모달 출력
     $('#LoginModal').modal('show');
 
-    // 회의록 변환 버튼 이벤트
+    // 마이크 작동 버튼 이벤트
     $(document).on("click","#btn-minutes",function(){
-        alert("회의록 변환");
+        voiceON();
     });
 
     // 룸 연결 커넥션 버튼 이벤트
@@ -205,37 +219,6 @@ $(function() {
             $("#modify-item-url").val(_obj.url);
     });
     socket_connect();
-    // 음성 마이크 작동
-    var rtc = holla.createClient({host :"121.154.33.215",port:3000,debug:true});
-    if (navigator.getUserMedia) {
-        navigator.getUserMedia({audio: true}, function(stream) {
-            /*
-            var output_mic = document.querySelector('#mic-speaker');
-            var stream_url = createSrc(stream);
-            output_mic.src = stream_url;
-            */
-            rtc.register("tom", function(worked) {
-                holla.createFullStream(function(err, stream) {
-                    var call = rtc.call("bob");
-                    call.addStream(stream);
-                });
-            });
-        }, errorCallback);
-    }
-
-    rtc.register("bob", function(worked) {
-        rtc.on("call", function(call) {
-
-            holla.createFullStream(function(err, stream) {
-                call.addStream(stream);
-                call.answer();
-                call.ready(function(stream) {
-                    holla.pipe(stream, $("#mic-speaker"));
-                });
-            });
-
-        });
-    });
 });
 
 function room_user_status(user){
@@ -254,15 +237,14 @@ function room_user_status(user){
 }
 
 var errorCallback = function(e) {
-    console.log('Reeeejected!', e);
+    console.log('Error! : ', e);
 };
+
 var createSrc = window.URL ? window.URL.createObjectURL : function(stream) {return stream;};
 // Socket.io 기본 통신 이벤트 함수
 // 접속
 function socket_connect(){
     socket = io.connect('http://121.154.33.215:3000/');
-
-
     socket.on('data-response', function(res){
         switch(res.category) {
             case "room-newuser":
@@ -301,16 +283,8 @@ function socket_connect(){
                     exception_msg(e);
                 }
                 break;
-            case "data-mic":
-                if(res.stream) {
-                    try{
-                    } catch(e){
-                        console.log(res.stream + " ERROR: " + e);
-                    }
-                }
-                break;
             case "connect":
-                console.log(res.msg);
+                //console.log(res.msg);
                 break;
             default:
                 socket_response(res.category);
@@ -348,8 +322,10 @@ function validation(data){
 
 // 예외처리 메세지 출력함수
 function exception_msg(m){
-
-
     console.log(m);
     //window.location.reload();
 }
+
+/*
+    Voice PeerConnection
+ */

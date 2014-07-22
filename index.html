@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="./js/jquery-1.11.1.min.js" charset="utf-8"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/idea.js" charset="utf-8"></script>
     <script src="./js/jquery-ui-1.10.4.custom.min.js" charset="utf-8"></script>
     <script src="./js/jquery.ui.draggable.js" charset="utf-8"></script>
     <script src="./js/jquery.ui.touch-punch.min.js" charset="utf-8"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet"/>
     <script src="./js/socket.io.js"></script>
-    <script src="./js/holla.js"></script>
+    <script src="./js/idea.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./css/idea.css"/>
     <title>Idea!</title>
 </head>
@@ -27,7 +26,7 @@
     <div class="left-btn" id="btn-minutes">
         <span class="glyphicon glyphicon-repeat icon"></span>
 
-        <p class="btn-title">회의록변환</p>
+        <p class="btn-title">마이크사용</p>
     </div>
     <!--
     <div class="left-btn" id="btn-save">
@@ -243,7 +242,8 @@
 <div class="connect-list">
     <ul id="conn-user">
     </ul>
-    <audio id="mic-speaker" autoplay></audio>
+    <audio id="local" autoplay muted></audio>
+    <audio id="remote" autoplay controls="controls"></audio>
 </div>
 <!-- /Connect User -->
 </body>

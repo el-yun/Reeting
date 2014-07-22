@@ -1,9 +1,10 @@
+var join = require('path');
 var express = require('express');
 var app = express();
-var http = require('http').Server(app).listen(3000);
+app.use(express.static(__dirname));
+var http = require('http').createServer(app).listen(3000);
 var io = require('socket.io')(http);
-var holla = require('holla');
-var rtc = holla.createServer(http);
+
 // Define
 var rooms = [];
 app.get('/', function(req, res){
@@ -27,7 +28,6 @@ io.sockets.on('connection', function(socket){
         }
     });
     socket.on('data-request', function(req){
-        console.log("data request...");
         switch(req.category) {
             case "room-connect":
                 set_room(socket, req.roomname, req.username);
@@ -46,11 +46,6 @@ io.sockets.on('connection', function(socket){
                 if(rooms[req.room] != undefined) {
                     rooms[req.room].collection[req.idx] = req.item;
                     socket.in(req.room).emit('data-response', { category: 'data-update', item: req.item, idx: req.idx});
-                }
-                break;
-            case "data-mic": // 아이템 업데이트
-                if(rooms[req.room] != undefined) {
-                    socket.in(req.room).emit('data-response', { category: 'data-mic', stream: req.stream});
                 }
                 break;
             case "test":
