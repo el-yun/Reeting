@@ -2,10 +2,221 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="856dd2d5-3b8c-49a3-89a8-4f0160c5ef94" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/holla.js" afterPath="$PROJECT_DIR$/js/holla.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/idea.js" afterPath="$PROJECT_DIR$/js/idea.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/index.js" afterPath="$PROJECT_DIR$/server/index.js" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\TODO.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\component.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\dist\Call.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\dist\holla.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\dist\shims.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\effects.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\examples\effects.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\examples\holla.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\examples\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\examples\server.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\examples\test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\holla.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\holla.min.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\lib\Call.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\lib\Server.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\lib\holla.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\lib\main.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\lib\shims.coffee" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\holla\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\lib\blob-read-stream.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\lib\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\lib\iostream.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\lib\socket.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\lib\uuid.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\History.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\browser.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\component.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\debug.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\node.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\node_modules\ms\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\node_modules\ms\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\node_modules\ms\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\node_modules\ms\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\debug\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\duplex.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\examples\CAPSLOCKTYPER.JS" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\examples\typer-fsr.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\examples\typer.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\float.patch" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\fs.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\lib\_stream_duplex.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\lib\_stream_passthrough.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\lib\_stream_readable.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\lib\_stream_transform.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\lib\_stream_writable.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\core-util-is\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\core-util-is\float.patch" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\core-util-is\lib\util.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\core-util-is\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\core-util-is\util.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\debuglog\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\debuglog\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\debuglog\debuglog.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\node_modules\debuglog\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\passthrough.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\readable.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\common.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\fixtures\x1024.txt" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-GH-64.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-GH-66.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-big-push.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-end-paused.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-pipe-after-end.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-pipe-error-handling.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-pipe-event.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-push-order.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-push-strings.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-readable-event.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-readable-flow-recursion.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-unshift-empty-chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-unshift-read-race.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream-writev.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-basic.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-compatibility.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-finish-pipe.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-large-read-stall.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-objects.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-pipe-error-handling.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-pipe-error-once-listener.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-push.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-read-sync-stack.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-empty-buffer-no-eof.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-from-list.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-legacy-drain.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-non-empty-end.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-wrap-empty.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-readable-wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-set-encoding.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-transform.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-unpipe-drain.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-unpipe-leak.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream2-writable.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\test\simple\test-stream3-pause-then-read.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\transform.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\writable.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\node_modules\readable-stream\zlib.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\socket.io-stream\socket.io-stream.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\.gitmodules" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\lib\webrtc.io.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\.bin\wscat" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\.bin\wscat.cmd" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\History.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\bench\parser.benchmark.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\bench\sender.benchmark.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\bench\speed.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\bench\util.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\bin\wscat" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\binding.gyp" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\builderror.log" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\doc\ws.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\public\app.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\public\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\public\uploader.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\fileapi\server.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats-express_3\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats-express_3\public\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats-express_3\server.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats\public\index.html" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\serverstats\server.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\examples\ssl.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\BufferPool.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\BufferUtil.fallback.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\BufferUtil.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\ErrorCodes.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Receiver.hixie.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Receiver.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Sender.hixie.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Sender.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Validation.fallback.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\Validation.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\WebSocket.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\WebSocketServer.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\lib\browser.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\History.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\lib\commander.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\commander\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\nan\.index.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\nan\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\nan\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\nan\nan.h" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\nan\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\Makefile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\lib\options.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\test\fixtures\test.conf" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\options\test\options.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\tinycolor\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\tinycolor\README.md" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\tinycolor\example.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\tinycolor\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\node_modules\tinycolor\tinycolor.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\package.json" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\src\bufferutil.cc" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\src\validation.cc" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\BufferPool.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\Receiver.hixie.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\Receiver.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\Sender.hixie.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\Sender.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\Validation.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\WebSocket.integration.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\WebSocket.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\WebSocketServer.test.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\autobahn-server.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\autobahn.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\agent1-cert.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\agent1-key.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\ca1-cert.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\ca1-key.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\certificate.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\key.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\request.pem" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\fixtures\textfile" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\hybi-common.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\node_modules\ws\test\testserver.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\git\ideameet\server\node_modules\webrtc.io\package.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ideameet.iws" />
@@ -34,7 +245,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.09045849" vertical-offset="1960" max-vertical-offset="4845">
+                <state vertical-scroll-proportion="0.11532386" vertical-offset="1960" max-vertical-offset="4845">
                   <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
                   <folding />
                 </state>
@@ -44,7 +255,7 @@
           <file leaf-file-name="idea.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/idea.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="4412" max-vertical-offset="6384">
+                <state vertical-scroll-proportion="0.0" vertical-offset="5415" max-vertical-offset="6384">
                   <caret line="285" column="27" selection-start-line="285" selection-start-column="27" selection-end-line="285" selection-end-column="27" />
                   <folding />
                 </state>
@@ -68,8 +279,8 @@
           <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/server/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33413175" vertical-offset="823" max-vertical-offset="1729">
-                  <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="59" selection-end-column="3" />
+                <state vertical-scroll-proportion="0.14372164" vertical-offset="0" max-vertical-offset="1729">
+                  <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -105,10 +316,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-24" />
-    <option name="y" value="179" />
-    <option name="width" value="1620" />
-    <option name="height" value="1008" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -178,6 +389,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideameet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideameet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -188,7 +417,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/golftalk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="terminal" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -221,14 +450,6 @@
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -239,14 +460,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -254,6 +473,16 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -324,18 +553,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-24" y="179" width="1620" height="1008" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="853" y="563" width="633" height="390" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="853" y="563" width="633" height="390" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2357775" sideWeight="0.60205245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23551106" sideWeight="0.601707" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2508108" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2357775" sideWeight="0.39680728" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23551106" sideWeight="0.39687055" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18486486" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -623,45 +852,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/holla/lib/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.76" vertical-offset="0" max-vertical-offset="190">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/holla/dist/Call.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4921">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/idea.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3648">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/holla/examples/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1387">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/holla/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0890625" vertical-offset="0" max-vertical-offset="640">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/holla/examples/server.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.36" vertical-offset="0" max-vertical-offset="323">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -694,13 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/node_modules/webrtc.io/lib/webrtc.io.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4877232" vertical-offset="0" max-vertical-offset="5206">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/voice_server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.084821425" vertical-offset="0" max-vertical-offset="896">
@@ -724,8 +911,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33413175" vertical-offset="823" max-vertical-offset="1729">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="59" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.14372164" vertical-offset="0" max-vertical-offset="1729">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -740,7 +927,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09045849" vertical-offset="1960" max-vertical-offset="4845">
+        <state vertical-scroll-proportion="0.11532386" vertical-offset="1960" max-vertical-offset="4845">
           <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
           <folding />
         </state>
